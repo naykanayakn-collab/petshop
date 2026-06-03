@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Furrytale Pet Store</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Comic Sans MS', cursive;
+    }
+
+    body{
+      background:#fff7f2;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+    header{
+      background:#ff9ecf;
+      padding:20px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1{
+      color:white;
+      font-size:35px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      margin-left:20px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ffe66d;
+    }
+
+    /* HERO */
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1600&auto=format&fit=crop')
+      center/cover;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      position:relative;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:rgba(255,182,193,0.4);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:1;
+      background:rgba(255,255,255,0.8);
+      padding:40px;
+      border-radius:30px;
+      max-width:700px;
+    }
+
+    .hero h2{
+      font-size:60px;
+      color:#ff5ca8;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      color:#555;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:15px 35px;
+      background:#ff5ca8;
+      color:white;
+      border-radius:50px;
+      text-decoration:none;
+      font-size:20px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#ff2f92;
+    }
+
+    /* PET SECTION */
+    .pets{
+      padding:80px 50px;
+      text-align:center;
+    }
+
+    .pets h2{
+      font-size:50px;
+      color:#ff5ca8;
+      margin-bottom:50px;
+    }
+
+    .pet-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px) scale(1.03);
+    }
+
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      margin-top:20px;
+      color:#ff5ca8;
+      font-size:28px;
+    }
+
+    .card p{
+      padding:15px;
+      color:#666;
+      font-size:17px;
+    }
+
+    .price{
+      font-size:28px;
+      color:#ff914d;
+      margin-bottom:20px;
+      font-weight:bold;
+    }
+
+    .buy-btn{
+      display:inline-block;
+      margin-bottom:25px;
+      padding:12px 25px;
+      background:#ff5ca8;
+      color:white;
+      border-radius:30px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .buy-btn:hover{
+      background:#ff2f92;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#ff9ecf;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+      font-size:18px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <h1>Furrytale Pet Store 🐾</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#pets">Pets</a>
+      <a href="#">Accessories</a>
+      <a href="#">Food</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Furrytale!</h2>
+      <p>
+        Cute pets, happy tails, and fluffy friends waiting for you!
+      </p>
+
+      <a href="#pets" class="btn">Explore Pets</a>
+    </div>
+  </section>
+
+  <!-- PETS -->
+  <section class="pets" id="pets">
+    <h2>Our Adorable Pets 🐶🐱</h2>
+
+    <div class="pet-grid">
+
+      <!-- PET 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=800&auto=format&fit=crop" alt="Cat">
+
+        <h3>British Shorthair</h3>
+
+        <p>
+          Soft fluffy cat with calm personality and adorable round eyes.
+        </p>
+
+        <div class="price">$450</div>
+
+        <a href="#" class="buy-btn">Adopt Me</a>
+      </div>
+
+      <!-- PET 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=800&auto=format&fit=crop" alt="Dog">
+
+        <h3>Golden Retriever</h3>
+
+        <p>
+          Loyal, playful, and perfect for families with children.
+        </p>
+
+        <div class="price">$800</div>
+
+        <a href="#" class="buy-btn">Adopt Me</a>
+      </div>
+
+      <!-- PET 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?q=80&w=800&auto=format&fit=crop" alt="Parrot">
+
+        <h3>Rainbow Parrot</h3>
+
+        <p>
+          Bright colorful feathers and super cheerful personality.
+        </p>
+
+        <div class="price">$320</div>
+
+        <a href="#" class="buy-btn">Adopt Me</a>
+      </div>
+
+      <!-- PET 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?q=80&w=800&auto=format&fit=crop" alt="Rabbit">
+
+        <h3>Mini Rabbit</h3>
+
+        <p>
+          Tiny fluffy bunny that loves cuddles and carrots.
+        </p>
+
+        <div class="price">$150</div>
+
+        <a href="#" class="buy-btn">Adopt Me</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Furrytale Pet Store 🐾 | Made with Love
+  </footer>
+
+</body>
+</html>
